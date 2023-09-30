@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: reddit-project
+  name: reddit-project
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: reddit-project
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: reddit-project
+    spec:
+      containers:
+      - image: himanshuofficial123/reddit-clone-project:latest
+        name: reddit-clone-project
+        ports:
+        - containerPort: 3000
+        resources: {}
+status: {}
